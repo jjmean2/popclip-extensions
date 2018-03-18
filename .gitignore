@@ -1,0 +1,3 @@
+*.popclipext
+.DS_Store
+*.pyc 
