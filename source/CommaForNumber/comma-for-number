@@ -1,0 +1,27 @@
+import os
+
+TEXT = os.environ['POPCLIP_TEXT']
+
+
+def remove_or_add_comma_for_number(number):
+    """ remove or add for number string"""
+    if ',' in number:
+        return number.replace(',', '')
+
+    chunks = []
+    while len(number) > 3:
+        chunks.append(number[-3:])
+        number = number[:-3]
+    chunks.append(number)
+
+    return ','.join(reversed(chunks))
+
+
+def main():
+    """main"""
+    number = os.environ['POPCLIP_TEXT']
+    result = remove_or_add_comma_for_number(number)
+    print(result)
+
+
+main()
