@@ -1,11 +1,11 @@
 const TEXT = process.env.POPCLIP_TEXT;
 
 function addOrRemoveCommaForNumber(number) {
-    if (!number) throw new Error('number is not defined');
+    if (!number) throw new Error('no target number exists!');
 
     if (number.includes(",")) {
         return number.replace(/,/g, "");
-    } 
+    }
 
     var chunks = []
     while (number.length > 3) {
